@@ -85,7 +85,7 @@ export const MultisendSection = ({ chainName }: { chainName: ChainName }) => {
         >
           Select asset for Multisend
         </Text>
-        <Tooltip title={<Text color={tooltipTextColor} attributes={{maxWidth: '30rem'}}>
+        <Tooltip placement='top-end' title={<Text color={tooltipTextColor} attributes={{ maxWidth: {mobile: '15rem', tablet:'30rem'} }}>
           Select an asset for multi-sending. 
           The selector displays only those assets that are on the balance. 
           If the required CW20 token is not in the list, check the &quot;add custom cw20 token address&quot; 

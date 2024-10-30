@@ -130,7 +130,7 @@ export const UploadCSV = ({ chainName, assetDigits, onDataRecieve }: UploadCsvPr
                 // backgroundColor='Red'
 
             >
-                <Tooltip title={<Text color={tooltipTextColor} attributes={{ maxWidth: '30rem' }}>
+                <Tooltip placement='left-end' title={<Text color={tooltipTextColor} attributes={{ maxWidth: {mobile: '15rem', tablet:'30rem'} }}>
                     The CSV file must not contain a header line.
                     Each line must contain exactly two fields.
                     The first field is the recipient&apos;s address, the second is the amount of the asset.
