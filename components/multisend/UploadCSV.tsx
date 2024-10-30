@@ -134,7 +134,7 @@ export const UploadCSV = ({ chainName, assetDigits, onDataRecieve }: UploadCsvPr
                     The CSV file must not contain a header line.
                     Each line must contain exactly two fields.
                     The first field is the recipient&apos;s address, the second is the amount of the asset.
-                    The digits of the number in the amount field must be separated by a period, not a comma.
+                    The digits of the number in the &apos;amount&apos; field should be separated by a dot, not a comma.
                     The comma in the CSV is reserved for separating fields.
                     You can download a sample file.
                 </Text>}><Text fontWeight='$bold' color='$blue500'>  (¡) </Text>
