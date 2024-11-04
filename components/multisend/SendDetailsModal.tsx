@@ -7,7 +7,7 @@ import { MsgSend } from 'osmojs/cosmos/bank/v1beta1/tx';
 import { MsgExecuteContract } from 'osmojs/cosmwasm/wasm/v1/tx';
 import { useChain } from '@cosmos-kit/react';
 import { EncodeObject } from '@cosmjs/proto-signing';
-import { useQueryHooks, useSendTx, useConfirmDialog, QueueSendresponse } from '@/hooks';
+import { useQueryHooks, useSendTx, useConfirmDialog, QueueSendresponse, batchSize } from '@/hooks';
 
 export type TokentInfo = {
     denom: string
@@ -83,7 +83,7 @@ export const SendDetailsModal = ({
     ) / asset.multiplier
     const isInsufficientAsset = asset.availableAmount < totalAmountToSend
 
-    const TransactionsNeeded = Math.ceil(sendingList.length / 45)
+    const TransactionsNeeded = Math.ceil(sendingList.length / batchSize)
     const isInsufficientFeeToken = estFee ? feeToken.availableAmount < estFee : false
 
     const isInsufficient = feeToken.denom === asset.denom && estFee ? 
@@ -129,7 +129,7 @@ export const SendDetailsModal = ({
                 signer: getOfflineSignerAmino(),
             })
 
-            const feeAmount = Math.round((await client.simulate(address, msgsToSend.slice(0, 45), '')) * 2 * gasPrice)
+            const feeAmount = Math.round((await client.simulate(address, msgsToSend.slice(0, batchSize), '')) * 2 * gasPrice)
             setEstFee(Number(feeAmount) * TransactionsNeeded / feeToken.multiplier)
         } catch (err) { console.error(err) }
     }

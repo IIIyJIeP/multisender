@@ -52,6 +52,8 @@ export enum SignMode {
   DIRECT = 'DIRECT'
 }
 
+export const batchSize = 40
+
 export const useSendTx = (chainName: string) => {
   const { toast } = useToast();
   const { address, getOfflineSignerAmino, getOfflineSignerDirect } = useChain(chainName);
@@ -82,9 +84,8 @@ export const useSendTx = (chainName: string) => {
       failedMsgs: []
     }
     const queueMsgs: EncodeObject[][] = []
-    const size = 40
-    for (let i = 0; i < Math.ceil(msgs.length / size); i++) {
-      queueMsgs[i] = msgs.slice((i * size), (i * size) + size)
+    for (let i = 0; i < Math.ceil(msgs.length / batchSize); i++) {
+      queueMsgs[i] = msgs.slice((i * batchSize), (i * batchSize) + batchSize)
     }
 
     let isAtLeastOneSuccessful = false
