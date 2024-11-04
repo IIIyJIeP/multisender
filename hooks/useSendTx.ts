@@ -82,7 +82,7 @@ export const useSendTx = (chainName: string) => {
       failedMsgs: []
     }
     const queueMsgs: EncodeObject[][] = []
-    const size = 45
+    const size = 40
     for (let i = 0; i < Math.ceil(msgs.length / size); i++) {
       queueMsgs[i] = msgs.slice((i * size), (i * size) + size)
     }
