@@ -1,13 +1,14 @@
-import { useEffect, useState } from 'react';
-import { ChainName } from 'cosmos-kit';
-import { BasicModal, Box, Button, Divider, Text } from '@interchain-ui/react';
-import { CsvData, Result, ResultModal } from '.';
+import { useEffect, useState } from 'react'
+import { ChainName } from 'cosmos-kit'
+import { BasicModal, Box, Button, Divider, Text } from '@interchain-ui/react'
+import { CsvData, Result, ResultModal } from '.'
 import { getSigningCosmosClient, getSigningCosmwasmClient } from 'osmojs'
-import { MsgSend } from 'osmojs/cosmos/bank/v1beta1/tx';
-import { MsgExecuteContract } from 'osmojs/cosmwasm/wasm/v1/tx';
-import { useChain } from '@cosmos-kit/react';
-import { EncodeObject } from '@cosmjs/proto-signing';
-import { useQueryHooks, useSendTx, useConfirmDialog, QueueSendresponse, batchSize } from '@/hooks';
+import { MsgSend } from 'osmojs/cosmos/bank/v1beta1/tx'
+import { MsgExecuteContract } from 'osmojs/cosmwasm/wasm/v1/tx'
+import { useChain } from '@cosmos-kit/react'
+import { EncodeObject } from '@cosmjs/proto-signing'
+import { useQueryHooks, useSendTx, useConfirmDialog, QueueSendresponse} from '@/hooks'
+import { Checkbox } from '@mui/joy'
 
 export type TokentInfo = {
     denom: string
@@ -42,7 +43,9 @@ export const SendDetailsModal = ({
     const [estFee, setEstFee] = useState<number>()
     const [result, setResult] = useState<Result>()
     const [isSuccess, setIsSuccess] = useState(false)
-
+    const [batchSize, setBatchSize] = useState(45)
+    const [isKeystone, setIsKeystone] = useState(false)
+  
     const {getOfflineSignerAmino, chain} = useChain(chainName)
     const {rpcEndpoint} = useQueryHooks(chainName)
     const {queueSendMsgsTx} = useSendTx(chainName)
@@ -105,6 +108,7 @@ export const SendDetailsModal = ({
 
         queueSendMsgsTx ({
             msgs,
+            batchSize,
             onSuccess: (res) => {
                 writeResult(res)
                 setIsSuccess(true)
@@ -129,8 +133,8 @@ export const SendDetailsModal = ({
                 signer: getOfflineSignerAmino(),
             })
 
-            const feeAmount = Math.round((await client.simulate(address, msgsToSend.slice(0, batchSize), '')) * 2 * gasPrice)
-            setEstFee(Number(feeAmount) * TransactionsNeeded / feeToken.multiplier)
+            const feeAmount = (await client.simulate(address, msgsToSend.slice(0, batchSize), '')) * 2 * gasPrice / batchSize
+            setEstFee(Math.round(feeAmount * msgsToSend.length) / feeToken.multiplier)
         } catch (err) { console.error(err) }
     }
 
@@ -150,7 +154,7 @@ export const SendDetailsModal = ({
 
     useEffect(() => {
         updateEstimateFee(msgs)
-    }, []) // eslint-disable-line
+    }, [batchSize]) // eslint-disable-line
     
     return (
         <BasicModal
@@ -241,6 +245,22 @@ export const SendDetailsModal = ({
                 </Box>
 
                 <Box width="$full" mt="$9">
+                    <Checkbox
+                        disabled={false}
+                        label="use Keystone"
+                        size="md"
+                        variant="outlined"
+                        color='neutral'
+                        onChange={(e) => {
+                            setIsKeystone(e.target.checked)
+                            if (e.target.checked) {
+                                setBatchSize(20)
+                            } else {
+                                setBatchSize(45)
+                            }
+                        }}
+                        checked={isKeystone}
+                    />
                     <Button
                         fluidWidth
                         intent="tertiary"

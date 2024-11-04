@@ -39,6 +39,7 @@ type SendTxOptions = {
 
 type QueueSendTxOptions = {
   msgs: EncodeObject[]
+  batchSize: number
   fee?: StdFee | null
   onSuccess?: (results: QueueSendresponse) => void
   onComplete?: () => void
@@ -52,8 +53,6 @@ export enum SignMode {
   DIRECT = 'DIRECT'
 }
 
-export const batchSize = 45
-
 export const useSendTx = (chainName: string) => {
   const { toast } = useToast();
   const { address, getOfflineSignerAmino, getOfflineSignerDirect } = useChain(chainName);
@@ -62,6 +61,7 @@ export const useSendTx = (chainName: string) => {
   const queueSendMsgsTx = async (options: QueueSendTxOptions) => {
     const {
       msgs,
+      batchSize,
       fee,
       onSuccess,
       onComplete,

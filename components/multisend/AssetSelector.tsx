@@ -34,6 +34,10 @@ export interface ChooseAssetProps {
 }
 
 const AssetOption = (props: Option) => {
+  const label = props.label.length > 30 ? 
+    props.label.slice(0, 11) + '...' + props.label.slice(-6)
+  : props.label
+
   return (
     <Stack
       direction="horizontal"
@@ -41,7 +45,7 @@ const AssetOption = (props: Option) => {
       attributes={{ alignItems: 'center' }}
     >
       <Avatar
-        name={props.label}
+        name={label}
         getInitials={(name) => name[0]}
         size="xs"
         src={props.iconUrl}
@@ -54,9 +58,10 @@ const AssetOption = (props: Option) => {
         justifyContent='space-between'
         width='$full'
         flexWrap='nowrap'
+        gap='$4'
       >
         <Text fontSize="$md" fontWeight="$normal" color="$text">
-          {props.label}
+          {label}
         </Text>
         <Text whiteSpace='nowrap' fontSize="$md" fontWeight="$normal" color="$text">
           {props.amount}
