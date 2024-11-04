@@ -158,7 +158,7 @@ export const SendDetailsModal = ({
     
     return (
         <BasicModal
-            title="Send Detais"
+            title="Sending Details"
             isOpen={isOpen}
             renderCloseButton={isSending ? ()=>{} : undefined}
             onClose={!isSending ? onModalClose : undefined}
