@@ -52,7 +52,7 @@ export enum SignMode {
   DIRECT = 'DIRECT'
 }
 
-export const batchSize = 40
+export const batchSize = 45
 
 export const useSendTx = (chainName: string) => {
   const { toast } = useToast();
