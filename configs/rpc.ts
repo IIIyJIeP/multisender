@@ -7,4 +7,5 @@ export const rpcURLs:RpcUrls = {
     juno: 'https://juno-rpc.prox4m1.iiiyjiep.ru',
     stargaze: 'https://stargaze-rpc.polkachu.com',
     neutron: 'https://neutron-rpc.polkachu.com',
+    elys: 'https://elys-rpc.polkachu.com',
 }

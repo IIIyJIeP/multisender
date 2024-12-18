@@ -1659,15 +1659,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chain-registry/client@npm:1.48.53":
-  version: 1.48.53
-  resolution: "@chain-registry/client@npm:1.48.53"
+"@chain-registry/client@npm:1.53.37":
+  version: 1.53.37
+  resolution: "@chain-registry/client@npm:1.53.37"
   dependencies:
-    "@chain-registry/types": "npm:^0.45.53"
-    "@chain-registry/utils": "npm:^1.46.53"
+    "@chain-registry/types": "npm:^0.50.37"
+    "@chain-registry/utils": "npm:^1.51.37"
     bfs-path: "npm:^1.0.2"
     cross-fetch: "npm:^3.1.5"
-  checksum: 10c0/0637c340baf06685c7ba8683b8121360a119180cf2c7ad0571e90d531d78791307be6f395188b68f1df55cd4675c6afac80a213dd8fb3c0145617e9f795cd402
+  checksum: 10c0/2cd26750348b062d8c9897f8e278dce061d7ab669c01826f5c1bae5c3a0ab6cb3406c9879d60bd32bfbbb642857cbd1a17d625938a0083fc7539061e82e1a61b
   languageName: node
   linkType: hard
 
@@ -1743,17 +1743,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chain-registry/types@npm:^0.45.53":
-  version: 0.45.53
-  resolution: "@chain-registry/types@npm:0.45.53"
-  checksum: 10c0/e3b1e4967c1302ea126735368c657b25b9b31a747812b1fe30c9741c6fdfe34c8a87c791db2e9033aad2a37af6c1b193044065904dedad9f15146c968ebd5e70
-  languageName: node
-  linkType: hard
-
 "@chain-registry/types@npm:^0.50.1":
   version: 0.50.1
   resolution: "@chain-registry/types@npm:0.50.1"
   checksum: 10c0/576478c5f16e2109620a66de7991f67b39ab2522b217125469c3788d6a4870ee059ae3f813819fbfd7ae7d7a0afb3f979df6afec2250c411750f05c127a2ff3e
+  languageName: node
+  linkType: hard
+
+"@chain-registry/types@npm:^0.50.37":
+  version: 0.50.37
+  resolution: "@chain-registry/types@npm:0.50.37"
+  checksum: 10c0/97f5a69b33edde7c2ac34f34099794dc512446c628fb0bc8928e774ee1330868393a33778c1d3776a096bc2e7a76bd6685553a829209a32c69d36dd474a4bd02
   languageName: node
   linkType: hard
 
@@ -1768,14 +1768,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chain-registry/utils@npm:^1.46.53":
-  version: 1.46.53
-  resolution: "@chain-registry/utils@npm:1.46.53"
+"@chain-registry/utils@npm:^1.51.37":
+  version: 1.51.37
+  resolution: "@chain-registry/utils@npm:1.51.37"
   dependencies:
-    "@chain-registry/types": "npm:^0.45.53"
+    "@chain-registry/types": "npm:^0.50.37"
     bignumber.js: "npm:9.1.2"
     sha.js: "npm:^2.4.11"
-  checksum: 10c0/bf8102c8b5aee92257e1dcc2b3bc18412df73869b21442a4b7c7c264eb9cc04bebc5771147faade19da0f44dbbcb655514b4819140a446701a45376186267d22
+  checksum: 10c0/e75991b78afad480e3d58fd0e92c35af200a74bb91315d02fb0c6762d951086bf2a4bc4b04936490533eef0d5af58d47ad02fe1334665395f2946606ffeb50b2
   languageName: node
   linkType: hard
 
@@ -9797,12 +9797,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chain-registry@npm:^1.69.10":
-  version: 1.69.10
-  resolution: "chain-registry@npm:1.69.10"
+"chain-registry@npm:^1.69.66":
+  version: 1.69.66
+  resolution: "chain-registry@npm:1.69.66"
   dependencies:
-    "@chain-registry/types": "npm:^0.50.1"
-  checksum: 10c0/631c4608a1ee245e63fb16a2b15caf8547ba239d6b2ca2ab5a34f8678aeca4a5e0a110c95f606369ad9ba2c5c43b05f612e786e07adc42b7ef2b1b5253df6570
+    "@chain-registry/types": "npm:^0.50.37"
+  checksum: 10c0/03e9c2707a378b8d446784c4cfbaaa1e5f5ca45e9abb4977df10d564c92f6ca8537ee467ab8bfacbd5b37b4c976e48282a1376fa284ded099ef94114c84529ec
   languageName: node
   linkType: hard
 
@@ -15321,7 +15321,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "multisender@workspace:."
   dependencies:
-    "@chain-registry/client": "npm:1.48.53"
+    "@chain-registry/client": "npm:1.53.37"
     "@chain-registry/types": "npm:^0.50.1"
     "@confio/relayer": "npm:0.7.0"
     "@cosmjs/amino": "npm:0.32.4"
@@ -15350,7 +15350,7 @@ __metadata:
     "@types/react": "npm:18.2.0"
     "@types/react-dom": "npm:18.2.0"
     bignumber.js: "npm:9.1.0"
-    chain-registry: "npm:^1.69.10"
+    chain-registry: "npm:^1.69.66"
     cosmos-kit: "npm:2.19.0"
     dayjs: "npm:1.11.10"
     eslint: "npm:8.28.0"
