@@ -1659,18 +1659,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chain-registry/client@npm:1.53.37":
-  version: 1.53.37
-  resolution: "@chain-registry/client@npm:1.53.37"
-  dependencies:
-    "@chain-registry/types": "npm:^0.50.37"
-    "@chain-registry/utils": "npm:^1.51.37"
-    bfs-path: "npm:^1.0.2"
-    cross-fetch: "npm:^3.1.5"
-  checksum: 10c0/2cd26750348b062d8c9897f8e278dce061d7ab669c01826f5c1bae5c3a0ab6cb3406c9879d60bd32bfbbb642857cbd1a17d625938a0083fc7539061e82e1a61b
-  languageName: node
-  linkType: hard
-
 "@chain-registry/client@npm:^1.48.1":
   version: 1.48.51
   resolution: "@chain-registry/client@npm:1.48.51"
@@ -1680,6 +1668,18 @@ __metadata:
     bfs-path: "npm:^1.0.2"
     cross-fetch: "npm:^3.1.5"
   checksum: 10c0/155918f1efe98605344541deaf4304754d01b5e1910d297810c910a5c5e08f17272258c5eb719b9700ab65ef0ca228d3060b18042a3a9ccb4040d5295ea2a390
+  languageName: node
+  linkType: hard
+
+"@chain-registry/client@npm:^1.53.50":
+  version: 1.53.50
+  resolution: "@chain-registry/client@npm:1.53.50"
+  dependencies:
+    "@chain-registry/types": "npm:^0.50.50"
+    "@chain-registry/utils": "npm:^1.51.50"
+    bfs-path: "npm:^1.0.2"
+    cross-fetch: "npm:^3.1.5"
+  checksum: 10c0/f419a94bcec3a5c6425853e8440fbb02ce352f5fbcb015fe860222bbedc19ded7510b6c110640d976672a3c9afc8ba98f9fc566f4cc497e5874f9039fe057439
   languageName: node
   linkType: hard
 
@@ -1750,10 +1750,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chain-registry/types@npm:^0.50.37":
-  version: 0.50.37
-  resolution: "@chain-registry/types@npm:0.50.37"
-  checksum: 10c0/97f5a69b33edde7c2ac34f34099794dc512446c628fb0bc8928e774ee1330868393a33778c1d3776a096bc2e7a76bd6685553a829209a32c69d36dd474a4bd02
+"@chain-registry/types@npm:^0.50.50":
+  version: 0.50.50
+  resolution: "@chain-registry/types@npm:0.50.50"
+  checksum: 10c0/2f21c6a43dfc35e930266dc37f946b7a674a0b70ce7ded29d0d030cf8ed36ad86af6b999df1c29d572417081cf23b216ba881da516dae319d38525e5a8ccd430
   languageName: node
   linkType: hard
 
@@ -1768,14 +1768,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chain-registry/utils@npm:^1.51.37":
-  version: 1.51.37
-  resolution: "@chain-registry/utils@npm:1.51.37"
+"@chain-registry/utils@npm:^1.51.50":
+  version: 1.51.50
+  resolution: "@chain-registry/utils@npm:1.51.50"
   dependencies:
-    "@chain-registry/types": "npm:^0.50.37"
+    "@chain-registry/types": "npm:^0.50.50"
     bignumber.js: "npm:9.1.2"
     sha.js: "npm:^2.4.11"
-  checksum: 10c0/e75991b78afad480e3d58fd0e92c35af200a74bb91315d02fb0c6762d951086bf2a4bc4b04936490533eef0d5af58d47ad02fe1334665395f2946606ffeb50b2
+  checksum: 10c0/53b99f89f1878275ca6e149f6228d93458fcde145c252235cd72d731c328038a3e03e8519c27e905d989eaf16a567004f4521fd2f563fe52af640fd91b1e7ab7
   languageName: node
   linkType: hard
 
@@ -9797,12 +9797,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chain-registry@npm:^1.69.66":
-  version: 1.69.66
-  resolution: "chain-registry@npm:1.69.66"
+"chain-registry@npm:^1.69.94":
+  version: 1.69.94
+  resolution: "chain-registry@npm:1.69.94"
   dependencies:
-    "@chain-registry/types": "npm:^0.50.37"
-  checksum: 10c0/03e9c2707a378b8d446784c4cfbaaa1e5f5ca45e9abb4977df10d564c92f6ca8537ee467ab8bfacbd5b37b4c976e48282a1376fa284ded099ef94114c84529ec
+    "@chain-registry/types": "npm:^0.50.50"
+  checksum: 10c0/1dd7a86fabe61a670cbc66493c2d50e33fa2f7d3b8e89f19d346c7df7d887ee6515daabe8b81099f1111f572f8e3ad1bf87000aa8d1352af35092b2793735cd5
   languageName: node
   linkType: hard
 
@@ -15321,8 +15321,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "multisender@workspace:."
   dependencies:
-    "@chain-registry/client": "npm:1.53.37"
-    "@chain-registry/types": "npm:^0.50.1"
+    "@chain-registry/client": "npm:^1.53.50"
+    "@chain-registry/types": "npm:^0.50.50"
     "@confio/relayer": "npm:0.7.0"
     "@cosmjs/amino": "npm:0.32.4"
     "@cosmjs/cosmwasm-stargate": "npm:0.32.4"
@@ -15350,7 +15350,7 @@ __metadata:
     "@types/react": "npm:18.2.0"
     "@types/react-dom": "npm:18.2.0"
     bignumber.js: "npm:9.1.0"
-    chain-registry: "npm:^1.69.66"
+    chain-registry: "npm:^1.69.94"
     cosmos-kit: "npm:2.19.0"
     dayjs: "npm:1.11.10"
     eslint: "npm:8.28.0"
