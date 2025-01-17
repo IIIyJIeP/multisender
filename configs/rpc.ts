@@ -8,4 +8,5 @@ export const rpcURLs:RpcUrls = {
     stargaze: 'https://stargaze-rpc.polkachu.com',
     neutron: 'https://neutron-rpc.polkachu.com',
     elys: 'https://elys-rpc.polkachu.com',
+    atomone: 'https://atomone-rpc.allinbits.com',
 }
