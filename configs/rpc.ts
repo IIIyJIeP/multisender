@@ -9,5 +9,5 @@ export const rpcURLs:RpcUrls = {
     neutron: 'https://neutron-rpc.polkachu.com',
     elys: 'https://elys-rpc.polkachu.com',
     atomone: 'https://atomone-rpc.allinbits.com',
-    dungeon: 'https://rpc.cosmos.directory/dungeon',
+    dungeon: 'https://dungeon-wallet.rpc.quasarstaking.ai',
 }
