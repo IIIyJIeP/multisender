@@ -10,4 +10,5 @@ export const rpcURLs:RpcUrls = {
     elys: 'https://elys-rpc.polkachu.com',
     atomone: 'https://atomone-rpc.allinbits.com',
     dungeon: 'https://dungeon-wallet.rpc.quasarstaking.ai',
+    omniflixhub: 'https://omniflix-rpc.polkachu.com/',
 }
