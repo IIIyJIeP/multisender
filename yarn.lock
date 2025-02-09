@@ -1757,6 +1757,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@chain-registry/types@npm:^0.50.68":
+  version: 0.50.68
+  resolution: "@chain-registry/types@npm:0.50.68"
+  checksum: 10c0/2ae07854ed8f9defd54dd39667040a212aea82fea4988e106643c17dbf304c142a3f5e0a0bd2779678e8f7fb9dee6fc4629b070cff93c9aa3e2ed3b5fbf36aa7
+  languageName: node
+  linkType: hard
+
 "@chain-registry/utils@npm:^1.46.1, @chain-registry/utils@npm:^1.46.51":
   version: 1.46.51
   resolution: "@chain-registry/utils@npm:1.46.51"
@@ -9797,12 +9804,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chain-registry@npm:^1.69.94":
-  version: 1.69.94
-  resolution: "chain-registry@npm:1.69.94"
+"chain-registry@npm:^1.69.119":
+  version: 1.69.119
+  resolution: "chain-registry@npm:1.69.119"
   dependencies:
-    "@chain-registry/types": "npm:^0.50.50"
-  checksum: 10c0/1dd7a86fabe61a670cbc66493c2d50e33fa2f7d3b8e89f19d346c7df7d887ee6515daabe8b81099f1111f572f8e3ad1bf87000aa8d1352af35092b2793735cd5
+    "@chain-registry/types": "npm:^0.50.68"
+  checksum: 10c0/37ca4a763a757d9f242d02378d164baa1796e29312d05eb6a157d03750e66fcac061afe027cdaab5028531d3bbecdc02ef0296af6fd2201f5f4b0f168e478937
   languageName: node
   linkType: hard
 
@@ -15350,7 +15357,7 @@ __metadata:
     "@types/react": "npm:18.2.0"
     "@types/react-dom": "npm:18.2.0"
     bignumber.js: "npm:9.1.0"
-    chain-registry: "npm:^1.69.94"
+    chain-registry: "npm:^1.69.119"
     cosmos-kit: "npm:2.19.0"
     dayjs: "npm:1.11.10"
     eslint: "npm:8.28.0"

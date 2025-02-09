@@ -47,7 +47,7 @@
     "@skip-go/client": "^0.10.3",
     "@tanstack/react-query": "4.32.0",
     "bignumber.js": "9.1.0",
-    "chain-registry": "^1.69.94",
+    "chain-registry": "^1.69.119",
     "cosmos-kit": "2.19.0",
     "dayjs": "1.11.10",
     "fast-fuzzy": "^1.12.0",
