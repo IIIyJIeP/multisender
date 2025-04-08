@@ -12,4 +12,5 @@ export const rpcURLs:RpcUrls = {
     dungeon: 'https://dungeon-wallet.rpc.quasarstaking.ai',
     omniflixhub: 'https://omniflix-rpc.polkachu.com',
     celestia: 'https://celestia-rpc.polkachu.com',
+    planq: 'https://planq-rpc.polkachu.com',
 }
